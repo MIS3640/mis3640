@@ -1,3 +1,14 @@
 {
-    "python.pythonPath": "C:\\Users\\zli\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+    "python.pythonPath": "C:\\Users\\zli\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.formatting.provider": "black",
+    "editor.tabSize": 4,
+    "python.linting.enabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": true,
+    "files.insertFinalNewline": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E402,F841,F401,E302,E305",
+    ],
 }
