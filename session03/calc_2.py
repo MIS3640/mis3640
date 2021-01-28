@@ -9,9 +9,16 @@ v = 4 / 3 * math.pi * r ** 3
 print(f"The volume of a sphere with radius 5 is {v:.2f}.")
 print()
 
-# erercise 2.2
-cost = (24.95 - 24.95 * 0.40) * 60 + 3 + 0.75 * (60 - 1)
-print(f"The total wholesale cost for 60 copies is ${cost:.2f}.")
+# exercise 2.2
+book_count = 60
+price = 24.95
+discount = 0.4
+cost = price * (1 - discount) * book_count
+shipping_cost_first = 3
+shipping_cost_per = 0.75
+shipping_cost = shipping_cost_first + shipping_cost_per * (book_count - 1)
+total_cost = cost + shipping_cost
+print(f"The total wholesale cost for {book_count} copies is ${total_cost:.2f}.")
 print()
 
 # exercise 2.3
