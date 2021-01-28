@@ -29,6 +29,10 @@ print(
 print()
 
 # exercise 2.4
-perc = (89 - 82) / 82 * 100
-print(f"The percentage of the increase is {perc:04.1f}%.")
+perc = (89 - 82) / 82
+print(f"The percentage of the increase is {perc*100:04.1f}%.")
+
+# or
+print(f"The percentage of the increase is {perc:05.1%}.")
+
 print()
