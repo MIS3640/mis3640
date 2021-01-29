@@ -6,8 +6,8 @@ import math
 
 r = 5
 v = 4 / 3 * math.pi * r ** 3
-print(f"The volume of a sphere with radius 5 is {v:.2f}.")
-print()
+print(f"The volume of a sphere with radius 5 is {v:.2f}.\n")
+# print()
 
 # exercise 2.2
 book_count = 60
