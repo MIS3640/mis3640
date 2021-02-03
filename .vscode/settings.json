@@ -2,10 +2,10 @@
     "python.pythonPath": "C:\\Users\\zli\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     "python.formatting.provider": "black",
     "editor.tabSize": 4,
-    "python.linting.enabled": false,
+    "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
-    "python.linting.flake8Enabled": false,
-    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
     "files.insertFinalNewline": true,
     "python.linting.flake8Args": [
         "--max-line-length=120",
