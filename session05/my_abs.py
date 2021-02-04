@@ -20,11 +20,10 @@ def my_abs(number):
 
     number: an integer or a floating point number
     """
-    if isinstance(number, (int, float)):
-        if number >= 0:
-            return number
-        else:
-            return -number
+    if number >= 0:
+        return number
+    else:
+        return -number
 
 
 print(my_abs(-10))
