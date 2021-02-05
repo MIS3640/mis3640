@@ -8,7 +8,6 @@ def quadratic(a, b, c):
     c: float
 
     Return two roots of the quadratic equation"""
-
     discriminant = b ** 2 - 4 * a * c  # calculate the discriminant
 
     x_1 = (-b + math.sqrt(discriminant)) / (2 * a)
