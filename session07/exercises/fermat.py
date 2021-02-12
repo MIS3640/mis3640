@@ -8,7 +8,7 @@ def check_fermat(a, b, c, n):
 
 
 def check_fermat_with_inputs():
-    """Prompts user to input 4 integers and check weather Fermat's theorem holds."""
+    """Prompts user to input 4 integers and check weather Fermat's theorem holds and print."""
     print('Please enter 4 integers for a, b, c and n to check Fermat\'s theorem:')
     a = int(input("Please enter an integer for a: "))
     b = int(input("Please enter an integer for b: "))
@@ -19,6 +19,7 @@ def check_fermat_with_inputs():
 
 
 def main():
+    # check_fermat(1, 2, 3, 4)
     check_fermat_with_inputs()
 
 
