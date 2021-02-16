@@ -22,10 +22,6 @@ def mysqrt(a):
     return x
 
 
-# for i in range(1, 10):
-#     print('The square root of', i, 'is', mysqrt(i))
-
-
 def square_root(n):
     """
     prints the square root of integers from 1 to n-1
@@ -43,6 +39,8 @@ def square_root(n):
 
 
 def main():
+    # for i in range(1, 10):
+    #     print('The square root of', i, 'is', mysqrt(i))
     square_root(10)
 
 
