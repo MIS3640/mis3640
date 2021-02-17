@@ -12,7 +12,7 @@ def mysqrt(a):
         the square root of a.
 
     """
-    epsilon = 1e-15
+    epsilon = 1e-5
     x = 1
     while True:
         y = (x + a / x) / 2
@@ -24,7 +24,7 @@ def mysqrt(a):
 
 def square_root(n):
     """
-    prints the square root of integers from 1 to n-1
+    Print the square root of integers from 1 to N-1
 
     Args:
         n(int): a positive number
