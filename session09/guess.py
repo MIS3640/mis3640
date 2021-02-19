@@ -13,7 +13,7 @@ def guess_number(max_number=20, total_tries=6):
     name = input('>> ')
 
     number = random.randint(1, max_number)
-    # print(number)
+    print(number)
     print(f'Well, {name}, I am thinking of a number between 1 and {max_number}.')
 
     while guesses_taken < total_tries:
@@ -39,10 +39,13 @@ def guess_number(max_number=20, total_tries=6):
         print(f'Nope. The number I was thinking was {number}.')
 
 
+# guess_number()
+
+
 def main():
     # guess_number(10, 4)
     # guess_number()
-    guess_number(total_tries=5, max_number=100)
+    guess_number(total_tries=8, max_number=100)
 
 
 if __name__ == "__main__":
