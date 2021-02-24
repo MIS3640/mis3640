@@ -1,4 +1,5 @@
 # import os
+
 # print(os.getcwd())
 
 
@@ -27,7 +28,7 @@ def find_long_words():
 
     for line in f:
         word = line.strip()
-        if len(word) > 20:
+        if len(word) > 18:
             print(word, len(word))
 
 
@@ -38,7 +39,11 @@ def has_no_e(word):
     """
     returns True if the given word doesn’t have the letter "e" in it
     """
-    pass
+    # for letter in word:
+    #     if letter == 'e' or letter == 'E':
+    #         return False
+    # return True
+    return 'e' not in word and 'E' not in word
 
 
 # print(has_no_e('Babson'))
@@ -50,11 +55,26 @@ def find_words_no_e():
     """
     returns the percentage of the words that don't have the letter "e"
     """
-    pass
+    f = open('data/words.txt')
+    # create a var to count the total number of words
+    num_total = 0
+    # create a var to count the words has-no-e
+    num_words_no_e = 0
+
+    for line in f:
+        word = line.strip()
+        # increment total number
+        num_total += 1
+        # if the word has no e, increment number-no-e
+        if has_no_e(word):
+            num_words_no_e += 1
+
+    # return number-no-e/total
+    return num_words_no_e / num_total
 
 
-# perc_no_e = find_words_no_e()
-# print(f'The percentage of the words with no "e" is {perc_no_e*100:.2f}%.')
+perc_no_e = find_words_no_e()
+print(f'The percentage of the words with no "e" is {perc_no_e*100:.2f}%.')
 
 
 def avoids(word, forbidden):
