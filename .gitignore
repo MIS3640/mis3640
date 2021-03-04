@@ -125,3 +125,5 @@ dmypy.json
 .pyre/
 temp.py
 misc/class_management.py
+session13/config.py
+quiz/quiz1.py
