@@ -1,0 +1,170 @@
+   1: >>> # string and list
+   2: >>> name = 'Kristina'
+   3: >>> # convert a string to a list
+   4: >>> name.split()
+['Kristina']
+   5: >>> name = 'Kristina Ferguson'
+   6: >>> name.split()
+['Kristina', 'Ferguson']
+   7: >>> name = 'Kristina'
+   8: >>> sum = 100
+   9: >>> sum([1, 2, 3])
+  10: >>> del sum
+  11: >>> sum(1, 2, 3)
+  12: >>> sum([1, 2, 3])
+6
+  13: >>> name
+'Kristina'
+  14: >>> list(name)
+['K', 'r', 'i', 's', 't', 'i', 'n', 'a']
+  15: >>> lst = list(name)
+  16: >>> lst
+['K', 'r', 'i', 's', 't', 'i', 'n', 'a']
+  17: >>> # convert a list of letters back to a string
+  18: >>> str(lst)
+"['K', 'r', 'i', 's', 't', 'i', 'n', 'a']"
+  19: >>> ''.join(lst)
+'Kristina'
+  20: >>> # string and dictionary
+  21: >>> name
+'Kristina'
+  22: >>> # get a dict counting letters in string
+  23: >>> d = dict()
+  24: >>> d
+{}
+  25: >>> d = {}
+  26: >>> type(d)
+dict
+  27:
+>>> for c in name:
+...     if c not in d:
+...         d[c] +=1
+...     else:
+...         d[c] = 1
+...
+  28: >>> name
+'Kristina'
+  29: >>> d
+{}
+  30:
+>>> for c in name:
+...     if c not in d:
+...         d[c] = 1
+...     else:
+...         d[c] += 1
+...
+  31: >>> d
+{'K': 1, 'r': 1, 'i': 2, 's': 1, 't': 1, 'n': 1, 'a': 1}
+  32: >>> # convert it back ...
+  33: >>> # string and tuple
+  34: >>> name
+'Kristina'
+  35: >>> t = tuple(name)
+  36: >>> t
+('K', 'r', 'i', 's', 't', 'i', 'n', 'a')
+  37: >>> type(t)
+tuple
+  38: >>> lst
+['K', 'r', 'i', 's', 't', 'i', 'n', 'a']
+  39: >>> lst[0] = 'C'
+  40: >>> lst
+['C', 'r', 'i', 's', 't', 'i', 'n', 'a']
+  41: >>> ''.join(lst)
+'Cristina'
+  42: >>> t
+('K', 'r', 'i', 's', 't', 'i', 'n', 'a')
+  43: >>> t[0] = 'C'
+  44: >>> t
+('K', 'r', 'i', 's', 't', 'i', 'n', 'a')
+  45: >>> ''.join(t)
+'Kristina'
+  46: >>> # string and set
+  47: >>> name
+'Kristina'
+  48: >>> # what is set
+  49: >>> s = set()
+  50: >>> s
+set()
+  51: >>> s = {1, 2, 3}
+  52: >>> s = {1, 2, 3, 3}
+  53: >>> s
+{1, 2, 3}
+  54: >>> name
+'Kristina'
+  55: >>> s = set(name)
+  56: >>> s
+{'K', 'a', 'i', 'n', 'r', 's', 't'}
+  57: >>> # list and dictionary
+  58: >>> lst
+['C', 'r', 'i', 's', 't', 'i', 'n', 'a']
+  59: >>> d = dict()
+  60:
+>>> for c in lst:
+...     if c not in d:
+...         d[c] = 1
+...     else:
+...         d[c] += 1
+...
+  61: >>> d
+{'C': 1, 'r': 1, 'i': 2, 's': 1, 't': 1, 'n': 1, 'a': 1}
+  62: >>> # dict -> list
+  63: >>> list(d)
+['C', 'r', 'i', 's', 't', 'n', 'a']
+  64: >>> list(d.keys())
+['C', 'r', 'i', 's', 't', 'n', 'a']
+  65: >>> list(d.values())
+[1, 1, 2, 1, 1, 1, 1]
+  66:
+>>> for k in d.key():
+...     print(k)
+...
+  67:
+>>> for k in d.keys():
+...     print(k)
+...
+  68:
+>>> for k in d.values():
+...     print(k)
+...
+  69:
+>>> for k, v in d.items():
+...     print(k, v)
+...
+  70:
+>>> for t in d.items():
+...     print(t, type(t))
+...
+  71: >>> lst
+['C', 'r', 'i', 's', 't', 'i', 'n', 'a']
+  72: >>> tuple(lst)
+('C', 'r', 'i', 's', 't', 'i', 'n', 'a')
+  73: >>> name
+'Kristina'
+  74: >>> name_2 = 'Will'
+  75: >>> names = [name, name_2]
+  76: >>> names
+['Kristina', 'Will']
+  77: >>> grades = [90, 95]
+  78: >>> for i in range(len(names))
+  79: >>> d = dict()
+  80:
+>>> for i in range(len(names)):
+...     d[names[i]] = grades[i]
+...
+  81: >>> d
+{'Kristina': 90, 'Will': 95}
+  82: >>> zip(names, grades)
+<zip at 0x290adfa99c0>
+  83: >>> dict(zip(names, grades))
+{'Kristina': 90, 'Will': 95}
+  84: >>> list(zip(names, grades))
+[('Kristina', 90), ('Will', 95)]
+  85: >>> d = dict()
+  86: >>> a = [1, 2, 3]
+  87: >>> b = [2, 4]
+  88: >>> x = 123
+  89: >>> b = 24
+  90: >>> d = {[1, 2, 3]: [123, 213], [2, 4]: [24, 42]}
+  91: >>> d = {(1, 2, 3): [123, 213], (2, 4): [24, 42]}
+  92: >>> d
+{(1, 2, 3): [123, 213], (2, 4): [24, 42]}
