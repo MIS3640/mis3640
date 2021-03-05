@@ -1,0 +1,161 @@
+   1: >>> # string and list
+   2: >>> name = 'raphael'
+   3: >>> 'raphael dunand'.split()
+['raphael', 'dunand']
+   4: >>> lst = []
+   5:
+>>> for c in name:
+...     lst.append(c)
+...
+   6: >>> lst
+['r', 'a', 'p', 'h', 'a', 'e', 'l']
+   7: >>> lst=[]
+   8: >>> list(name)
+['r', 'a', 'p', 'h', 'a', 'e', 'l']
+   9: >>> lst = list(name)
+  10: >>> lst
+['r', 'a', 'p', 'h', 'a', 'e', 'l']
+  11: >>> str(lst)
+"['r', 'a', 'p', 'h', 'a', 'e', 'l']"
+  12: >>> ''.join(lst)
+'raphael'
+  13: >>> '-'.join(lst)
+'r-a-p-h-a-e-l'
+  14: >>> # string and dict
+  15: >>> # create a dictionary that counts letters in string
+  16: >>> name
+'raphael'
+  17: >>> import json
+  18: >>> json.load(name)
+  19: >>> # string and dict
+  20: >>> # create a dictionary that counts letters in string
+  21: >>> name
+'raphael'
+  22: >>> d = {}
+  23: >>> type(d)
+dict
+  24:
+>>> for c in name:
+...     if c not in d:
+...         d[c] = 1
+...     else:
+...         d[c] += 1
+...
+  25: >>> d
+{'r': 1, 'a': 2, 'p': 1, 'h': 1, 'e': 1, 'l': 1}
+  26: >>> # string and tuple
+  27: >>> name
+'raphael'
+  28: >>> t_1 = 1, 2, 3
+  29: >>> type(t_1)
+tuple
+  30: >>> lst
+['r', 'a', 'p', 'h', 'a', 'e', 'l']
+  31: >>> lst[0] = 'L'
+  32: >>> lst
+['L', 'a', 'p', 'h', 'a', 'e', 'l']
+  33: >>> t_1
+(1, 2, 3)
+  34: >>> t_1[0]
+1
+  35: >>> t_1[0] = 4
+  36: >>> name
+'raphael'
+  37: >>> tuple(name)
+('r', 'a', 'p', 'h', 'a', 'e', 'l')
+  38: >>> t = tuple(name)
+  39: >>> t
+('r', 'a', 'p', 'h', 'a', 'e', 'l')
+  40: >>> ''.join(t)
+'raphael'
+  41: >>> # list and dictionary
+  42: >>> lst
+['L', 'a', 'p', 'h', 'a', 'e', 'l']
+  43: >>> d = {}
+  44:
+>>> for c in lst:
+...     if c in d:
+...         d[c] += 1
+...     else:
+...         d[c] = 1
+...
+  45: >>> d
+{'L': 1, 'a': 2, 'p': 1, 'h': 1, 'e': 1, 'l': 1}
+  46: >>> # string and set
+  47: >>> s = {1, 2, 3, 1, 2, 3}
+  48: >>> s
+{1, 2, 3}
+  49: >>> name
+'raphael'
+  50: >>> set(name)
+{'a', 'e', 'h', 'l', 'p', 'r'}
+  51: >>> s = set(name)
+  52: >>> s
+{'a', 'e', 'h', 'l', 'p', 'r'}
+  53: >>> s[0]
+  54: >>> # list and tuple
+  55: >>> lst
+['L', 'a', 'p', 'h', 'a', 'e', 'l']
+  56: >>> tuple(lst)
+('L', 'a', 'p', 'h', 'a', 'e', 'l')
+  57: >>> list(tuple(lst))
+['L', 'a', 'p', 'h', 'a', 'e', 'l']
+  58: >>> # list and set
+  59: >>> lst
+['L', 'a', 'p', 'h', 'a', 'e', 'l']
+  60: >>> set(lst)
+{'L', 'a', 'e', 'h', 'l', 'p'}
+  61: >>> # string, list and dictionary
+  62: >>> d
+{'L': 1, 'a': 2, 'p': 1, 'h': 1, 'e': 1, 'l': 1}
+  63:
+>>> for k in d:
+...     print(k)
+...
+  64:
+>>> for k in d.keys():
+...     print(k)
+...
+  65: >>> d
+{'L': 1, 'a': 2, 'p': 1, 'h': 1, 'e': 1, 'l': 1}
+  66:
+>>> for k in d.values():
+...     print(k)
+...
+  67: >>> list(d.keys())
+['L', 'a', 'p', 'h', 'e', 'l']
+  68: >>> list(d.values())
+[1, 2, 1, 1, 1, 1]
+  69:
+>>> for k, v in d.items():
+...     print(k, v)
+...
+  70:
+>>> for item in d.items():
+...     print(item, type(item))
+...
+  71: >>> names = [name, 'sammi']
+  72: >>> names
+['raphael', 'sammi']
+  73: >>> grades = [95, 99]
+  74: >>> d = dict()
+  75:
+>>> for i in range(len(names)):
+...     d[names[i]] = grades[i]
+...
+  76: >>> d
+{'raphael': 95, 'sammi': 99}
+  77: >>> dict(zip(names, grades))
+{'raphael': 95, 'sammi': 99}
+  78: >>> list(zip(names, grades))
+[('raphael', 95), ('sammi', 99)]
+  79: >>> list('delta')
+['d', 'e', 'l', 't', 'a']
+  80: >>> sorted(list('deltas'))
+['a', 'd', 'e', 'l', 's', 't']
+  81: >>> sorted(list('desalt'))
+['a', 'd', 'e', 'l', 's', 't']
+  82: >>> d = {[1, 2, 3]: [123, 213], [5, 6]: [56, 65]}
+  83: >>> d = {(1, 2, 3): [123, 213], (5, 6): [56, 65]}
+  84: >>> tuple(sorted('deltas'))
+('a', 'd', 'e', 'l', 's', 't')
