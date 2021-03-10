@@ -20,6 +20,8 @@ def process_file(filename, skip_header):
         skip_gutenberg_header(fp)
 
     # strippables = string.punctuation + string.whitespace
+    # via: https://stackoverflow.com/questions/60983836/complete-set-of-punctuation-marks-for-python-not-just-ascii
+
     strippables = ''.join(
         [chr(i) for i in range(sys.maxunicode) if category(chr(i)).startswith("P")]
     )
@@ -28,7 +30,9 @@ def process_file(filename, skip_header):
         if line.startswith('*** END OF THIS PROJECT'):
             break
 
-        line = line.replace('-', ' ')
+        line = line.replace('-', ' ').replace(
+            chr(8212), ' '
+        )  # Unicode 8212 is the HTML decimal entity for em dash
 
         for word in line.split():
             # word could be 'Sussex.'
@@ -53,10 +57,12 @@ def skip_gutenberg_header(fp):
 
 def total_words(hist):
     """Returns the total of the frequencies in a histogram."""
+    return sum(hist.values())
 
 
 def different_words(hist):
     """Returns the number of different words in a histogram."""
+    return len(hist)
 
 
 def most_common(hist, excluding_stopwords=False):
@@ -66,6 +72,14 @@ def most_common(hist, excluding_stopwords=False):
 
     returns: list of (frequency, word) pairs
     """
+    # Pseudo-code
+    # 1. create a list for return, freq_word_list
+    # 2. Use for to loop over the dictionary, hist
+    #   1. get the word, freq from hist
+    #   2. create a tuple this way (freq, word)
+    #   3. append the tuple to freq_word_list
+    # 3. sort freq_word_list
+    # 4. return it
 
 
 def print_most_common(hist, num=10):
@@ -96,8 +110,8 @@ def random_word(hist):
 def main():
     hist = process_file('data/alice.txt', skip_header=True)
     print(hist)
-    # print('Total number of words:', total_words(hist))
-    # print('Number of different words:', different_words(hist))
+    print('Total number of words:', total_words(hist))
+    print('Number of different words:', different_words(hist))
 
     # t = most_common(hist, excluding_stopwords=True)
     # print('The most common words are:')
